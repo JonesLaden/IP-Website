@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Whats my ip</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="STYLESHEET" href="styles.css">
+    </head>
+    <body background="media/background.jpg">
+        <h1>IPv4 = <span id="ip"></span></h1>
+        <h2>Land = <span id="country"></span></h2>
+
+        <script>
+            $.getJSON("https://ipapi.co/json", function(data){
+            $("#ip").text(data.ip);
+            $("#country").text(data.country_name);
+        })
+        </script>
+    </body>
+</html>
